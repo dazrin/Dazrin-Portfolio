@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react"
 import sanityClient from "../client.js";
 import image from "../background.jpg";
-import imageUrlBuilder from "@sanity/image-url";
+//import imageUrlBuilder from "@sanity/image-url";
 
-const builder = imageUrlBuilder(sanityClient);
+/*const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
     return builder.image(source)
-}
+}*/
 
 export default function Home() {
     const [author, setAuthor] = useState(null);
