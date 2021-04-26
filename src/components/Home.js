@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from "react"
 import sanityClient from "../client.js";
 import image from "../background.jpg";
-//import imageUrlBuilder from "@sanity/image-url";
-
-/*const builder = imageUrlBuilder(sanityClient);
-function urlFor(source) {
-    return builder.image(source)
-}*/
 
 export default function Home() {
     const [author, setAuthor] = useState(null);
@@ -41,10 +35,3 @@ export default function Home() {
         </main>
     )
 }
-/* User Image
-                  <img
-                      src={urlFor(author.authorImage).url()}
-                      className="mx-auto rounded w-32 h-32 lg:w-64 lg:h-64 "
-                      alt={author.name}
-                  />
-*/
