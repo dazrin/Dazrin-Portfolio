@@ -10,11 +10,28 @@
 * [Contributing](#Contributing)
 
 ## About
-  This is my portfolio application built using react!
+  This is my portfolio application built using ReactJS and Sanity.IO!
+  
+  > This website was built to showcase my projects and publish blog posts on various topics related to development. This is a single page application deployed using netlify and using Sanity's headless content management system (CMS) known as Sanity Studio to manage my content on the back-end.
 
 
 ## Instructions
-<Under construction>
+1. Navigate to the deployed app here: https://dazrin.netlify.app/
+ > Once you click the link, you will be greeted with the home page. You may use the nav bar at the top of the screen to navigate to the different pages on the website. Additionally, my social networks are placed on the right-hand side of the nav bar for your convenience. Check them out!
+ ![Home Page](https://i.imgur.com/WlyFQDN.png)
+
+2. Blog Posts Page
+ > Upon navigation to this page, you will find my blog posts ranging from topics such as development, daily life, and my thoughts and interests. Simply click on a blog post to see it's contents. 
+ ![Blog Posts Page](https://i.imgur.com/NzSeeAG.png)
+
+3. Projects Page
+ > Upon navigation to this page, you will find my past projects and some information regarding them. You may choose to click either the title of the project to view it, or the link provided below it.
+![Projects Page](https://i.imgur.com/ZWDP5l1.png)
+
+4. About me Page
+ > On this page, you will find a photo of myself along with some facts about me. Thanks for viewing my portfolio!
+ ![About Me Page](https://i.imgur.com/0wz0a2X.png)
+
 
 ## License
 MIT License
