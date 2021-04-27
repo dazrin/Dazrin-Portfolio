@@ -4,7 +4,19 @@ import sanityClient from "../client.js";
 
 export default function Project() {
     const [projectData, setProjectData] = useState(null);
-
+    /*
+            `*[_type == "post"]{
+        title,
+        slug,
+        mainImage{
+          asset->{
+            _id,
+            url
+          },
+          alt
+        }
+      }`
+    */
     useEffect(() => {
         sanityClient
         .fetch(
@@ -12,6 +24,14 @@ export default function Project() {
             title, 
             date,
             place,
+            projectImage{
+                asset->{
+                    _id,
+                    url
+                },
+                alt
+            },
+            body,
             description,
             projectType,
             link,
@@ -23,7 +43,7 @@ export default function Project() {
     }, []);
 
     return (
-        <main className="bg-blue-100 min-h-screen p-12">
+        <main className="bg-purple-100 min-h-screen p-12">
             <section className="container mx-auto">
                 <h1 className="text-5xl flex justify-center cursive">My Projects</h1>
                 <h2 className="text-lg text-gray-600 flex justify-center mb-12">
@@ -42,6 +62,7 @@ export default function Project() {
                             {project.title}
                           </a>
                       </h3>
+                      
                       <div className="text-gray-500 text-xs space-x-4">
                         <span>
                             <strong className="font-bold">Finished on</strong>: {" "}
@@ -55,6 +76,7 @@ export default function Project() {
                             <strong className="font-bold">Type</strong>:{" "}
                             {project.projectType}
                         </span>
+
                         <p className="my-6 text-lg text-gray-700 leading-relaxed">
                             {project.description}
                         </p>
@@ -68,6 +90,11 @@ export default function Project() {
                         <span role="img" aria-label="right pointer">
                           👉
                         </span>
+                        <img
+                              src={project.projectImage.asset.url}
+                              alt={project.projectImage.alt}
+                              className=" lg:w-full lg:h-full rounded object-cover "
+                            />
                         </a>
                       </div>
                     </article>
