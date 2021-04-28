@@ -4,19 +4,7 @@ import sanityClient from "../client.js";
 
 export default function Project() {
     const [projectData, setProjectData] = useState(null);
-    /*
-            `*[_type == "post"]{
-        title,
-        slug,
-        mainImage{
-          asset->{
-            _id,
-            url
-          },
-          alt
-        }
-      }`
-    */
+
     useEffect(() => {
         sanityClient
         .fetch(
@@ -31,10 +19,10 @@ export default function Project() {
                 },
                 alt
             },
-            body,
             description,
             projectType,
             link,
+            github,
             tags
       }`
         )
@@ -47,12 +35,12 @@ export default function Project() {
             <section className="container mx-auto">
                 <h1 className="text-5xl flex justify-center cursive">My Projects</h1>
                 <h2 className="text-lg text-gray-600 flex justify-center mb-12">
-                    Welcome to my projects page
+                ⬇️ Scroll down to view my projects! ⬇️
                 </h2>
-                <section className="grid grid-cols-2 gap-8">
+                <section className="grid grid-cols-1 gap-6">
                     {projectData && projectData.map((project, index) => (
-                    <article className="relative rounded-lg shadow-xl bg-white p-16">
-                      <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-purple-700">
+                    <article className="relative rounded-lg shadow-xl bg-white p-10">
+                      <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-yellow-600">
                           <a
                           href={project.link}
                           alt={project.title}
@@ -84,18 +72,41 @@ export default function Project() {
                           href={project.link}
                           rel="noopener noreferrer"
                           target="_blank"
-                          className="text-blue-500 font-bold hover:underline hover:text-blue-400 text-xl"
+                          className="p-10 text-pink-700 font-bold hover:underline hover:text-pink-400 text-xl"
                         >
-                            View The Project{" "}
-                        <span role="img" aria-label="right pointer">
-                          👉
+                            Deployed Link{" "}
+                        <span role="img" aria-label="link">
+                            🔗
                         </span>
-                        <img
+                        </a>
+
+                        <a 
+                          href={project.github}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                          className="text-purple-700 font-bold hover:underline hover:text-purple-400 text-xl"
+                        >
+                            Github Repo{" "}
+                        <span role="img" aria-label="link">
+                            🖥️
+                        </span>
+                        </a>
+
+                        <div className="pt-4">
+                        <a
+                          href={project.link}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                          className="hover:scale-150"
+                        >
+                            <img
                               src={project.projectImage.asset.url}
                               alt={project.projectImage.alt}
-                              className=" lg:w-full lg:h-full rounded object-cover "
+                              className="lg:full lg:h-64 rounded object-cover hover:scale-150"
                             />
                         </a>
+                        </div>
+                        
                       </div>
                     </article>
                     ))}

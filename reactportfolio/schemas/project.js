@@ -46,6 +46,12 @@ export default {
         },
         {
             name: "link",
+            title: "Deployed Link",
+            type: "url",
+        },
+        {
+            name: "github",
+            title: "Github Repo",
             type: "url",
         },
         {
