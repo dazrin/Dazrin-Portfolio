@@ -20,6 +20,19 @@ export default {
             type: "text",
         },
         {
+            name: 'body',
+            title: 'Body',
+            type: 'blockContent',
+          },
+        {
+            name: "projectImage",
+            title: "Project Image",
+            type: "image",
+            options: {
+                hotspot: true,
+              }
+        },
+        {
             name: "projectType",
             title: "Project type",
             type: "string",
@@ -33,6 +46,12 @@ export default {
         },
         {
             name: "link",
+            title: "Deployed Link",
+            type: "url",
+        },
+        {
+            name: "github",
+            title: "Github Repo",
             type: "url",
         },
         {
@@ -48,4 +67,17 @@ export default {
             },
         },
     ],
+    preview: {
+        select: {
+          title: 'title',
+          author: 'author.name',
+          media: 'projectImage',
+        },
+        prepare(selection) {
+          const {author} = selection
+          return Object.assign({}, selection, {
+            subtitle: author && `by ${author}`,
+          })
+        },
+      },
 };

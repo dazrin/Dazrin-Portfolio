@@ -12,9 +12,17 @@ export default function Project() {
             title, 
             date,
             place,
+            projectImage{
+                asset->{
+                    _id,
+                    url
+                },
+                alt
+            },
             description,
             projectType,
             link,
+            github,
             tags
       }`
         )
@@ -23,16 +31,16 @@ export default function Project() {
     }, []);
 
     return (
-        <main className="bg-blue-100 min-h-screen p-12">
+        <main className="bg-purple-100 min-h-screen p-12">
             <section className="container mx-auto">
                 <h1 className="text-5xl flex justify-center cursive">My Projects</h1>
                 <h2 className="text-lg text-gray-600 flex justify-center mb-12">
-                    Welcome to my projects page
+                ⬇️ Scroll down to view my projects! ⬇️
                 </h2>
-                <section className="grid grid-cols-2 gap-8">
+                <section className="grid grid-cols-1 gap-6">
                     {projectData && projectData.map((project, index) => (
-                    <article className="relative rounded-lg shadow-xl bg-white p-16">
-                      <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-purple-700">
+                    <article className="relative rounded-lg shadow-xl bg-white p-10">
+                      <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-yellow-600">
                           <a
                           href={project.link}
                           alt={project.title}
@@ -42,6 +50,7 @@ export default function Project() {
                             {project.title}
                           </a>
                       </h3>
+                      
                       <div className="text-gray-500 text-xs space-x-4">
                         <span>
                             <strong className="font-bold">Finished on</strong>: {" "}
@@ -55,6 +64,7 @@ export default function Project() {
                             <strong className="font-bold">Type</strong>:{" "}
                             {project.projectType}
                         </span>
+
                         <p className="my-6 text-lg text-gray-700 leading-relaxed">
                             {project.description}
                         </p>
@@ -62,13 +72,41 @@ export default function Project() {
                           href={project.link}
                           rel="noopener noreferrer"
                           target="_blank"
-                          className="text-blue-500 font-bold hover:underline hover:text-blue-400 text-xl"
+                          className="p-10 text-pink-700 font-bold hover:underline hover:text-pink-400 text-xl"
                         >
-                            View The Project{" "}
-                        <span role="img" aria-label="right pointer">
-                          👉
+                            Deployed Link{" "}
+                        <span role="img" aria-label="link">
+                            🔗
                         </span>
                         </a>
+
+                        <a 
+                          href={project.github}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                          className="text-purple-700 font-bold hover:underline hover:text-purple-400 text-xl"
+                        >
+                            Github Repo{" "}
+                        <span role="img" aria-label="link">
+                            🖥️
+                        </span>
+                        </a>
+
+                        <div className="pt-4">
+                        <a
+                          href={project.link}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                          className="hover:scale-150"
+                        >
+                            <img
+                              src={project.projectImage.asset.url}
+                              alt={project.projectImage.alt}
+                              className="lg:full lg:h-64 rounded object-cover hover:scale-150"
+                            />
+                        </a>
+                        </div>
+                        
                       </div>
                     </article>
                     ))}
