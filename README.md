@@ -26,11 +26,11 @@
 
 3. Projects Page
  > Upon navigation to this page, you will find my past projects and some information regarding them. You may choose to click either the title of the project to view it, or the link provided below it.
-![Projects Page](https://i.imgur.com/ZWDP5l1.png)
+![Projects Page](https://i.imgur.com/hQ9Im8J.png)
 
 4. About me Page
  > On this page, you will find a photo of myself along with some facts about me. Thanks for viewing my portfolio!
- ![About Me Page](https://i.imgur.com/Lq0b8Hy.png)
+ ![About Me Page](https://i.imgur.com/0foWPOZ.png)
 
 
 ## License
