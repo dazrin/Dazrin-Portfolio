@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 import sanityClient from "../client.js";
 import background from "../background.jpg";
 import imageUrlBuilder from "@sanity/image-url";
-import BlockContent from "@sanity/block-content-to-react";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -27,7 +26,7 @@ export default function Home() {
     if (!author) return <div>Loading...</div>;
 
     return (
-        <main className="relative">
+    <main className="relative">
         <img
           src={background}
           alt="background"
@@ -46,7 +45,7 @@ export default function Home() {
                   className="text-lg flex flex-col justify-center"
                 >
                     <h1 className="text-4xl text-pink-200 font-bold cursive leading-none lg:leading-snug home-name">Hello! I'm <span className="text-yellow-300">Dazrin.</span></h1>
-                    <h1 className="cursive text-5xl text-purple-200 mb-4">
+                    <h1 className="cursive text-5xl text-pink-100 mb-4">
                         I'm a full-stack developer based in Vancouver, BC
                     </h1>
                     <div className="prose lg:prose text-white">
@@ -56,18 +55,5 @@ export default function Home() {
             </section>
         </div>
     </main>
-        /*<main>
-            <img 
-            src={image} 
-            alt="sphere background" 
-            className="absolute object-cover w-full h-full"
-            />
-            <section className="relative grid justify-center min-h-screen pt-12 lg:pt-64 px-8">
-                <h1 className="text-4xl text-pink-400 font-bold cursive leading-none lg:leading-snug home-name">Hello! I'm <span className="text-yellow-200">Dazrin.</span></h1>
-
-
-            </section>
-            
-        </main>*/
     )
 }
