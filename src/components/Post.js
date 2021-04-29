@@ -25,7 +25,7 @@ export default function Post() {
   }, []);
 
   return (
-    <main className="bg-pink-100 min-h-screen p-12">
+    <main className="bg-purple-100 min-h-screen p-12">
       <section className="container mx-auto">
         <h1 className="text-6xl flex justify-center cursive">
           Blog Posts Page

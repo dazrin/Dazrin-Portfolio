@@ -14,6 +14,8 @@ import tailwind from "../icons/tailwind.png";
 import semantic from "../icons/semantic.png";
 import bootstrap from "../icons/bootstrap.png";
 import mysql from "../icons/mysql.png";
+import github from "../icons/github.png";
+import sanity from "../icons/sanity.png"
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -93,9 +95,9 @@ export default function Home() {
             </div>
             <div className="p-2">
             <img
-                  src={graphql}
+                  src={github}
                   className="w-12 h-12 lg:w-16 lg:h-16 mr-8"
-                  alt={"Node"}
+                  alt={"NGithub"}
                 />
             </div>
             <div className="p-2">
@@ -128,9 +130,9 @@ export default function Home() {
             </div>
             <div className="p-2">
             <img
-                  src={tailwind}
+                  src={graphql}
                   className="w-12 h-12 lg:w-16 lg:h-16 mr-8"
-                  alt={"TailwindCSS"}
+                  alt={"GraphQL"}
                 />
             </div>
             <div className="p-2">
@@ -142,7 +144,7 @@ export default function Home() {
             </div>
             <div className="p-2">
             <img
-                  src={bootstrap}
+                  src={tailwind}
                   className="w-12 h-12 lg:w-16 lg:h-16 mr-8"
                   alt={"Bootstrap"}
                 />
@@ -154,7 +156,20 @@ export default function Home() {
                   alt={"MySQL"}
                 />
             </div>
-            
+            <div className="p-2">
+            <img
+                  src={bootstrap}
+                  className="w-12 h-12 lg:w-16 lg:h-16 mr-8"
+                  alt={"Bootstrap"}
+                />
+            </div>
+            <div className="p-2">
+            <img
+                  src={sanity}
+                  className="w-12 h-12 lg:w-16 lg:h-16 mr-8"
+                  alt={"Sanity"}
+                />
+            </div>
         </div>
         </section>
         </div>

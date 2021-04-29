@@ -34,7 +34,7 @@ export default function About() {
               className="absolute w-full"
             />
             <div className="p-10 lg:pt-48 container mx-auto relative">
-                <section className="bg-blue-900 bg-opacity-90 rounded-lg shadow-2xl lg:flex p-20">
+                <section className="bg-gray-900 bg-opacity-80 rounded-lg shadow-2xl lg:flex p-20">
                     <img
                       src={urlFor(author.authorImage).url()}
                       className="rounded w-32 h-32 lg:w-full lg:h-full mr-8"

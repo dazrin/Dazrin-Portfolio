@@ -40,7 +40,7 @@ export default function Project() {
                 <section className="grid grid-cols-1 gap-6">
                     {projectData && projectData.map((project, index) => (
                     <article className="relative rounded-lg shadow-xl bg-white p-10">
-                      <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-yellow-600">
+                      <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-pink-400">
                           <a
                           href={project.link}
                           alt={project.title}

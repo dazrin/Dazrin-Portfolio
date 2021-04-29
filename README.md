@@ -18,19 +18,19 @@
 ## Instructions
 1. Navigate to the deployed app here: https://dazrin.netlify.app/
  > Once you click the link, you will be greeted with the home page. You may use the nav bar at the top of the screen to navigate to the different pages on the website. Additionally, my social networks are placed on the right-hand side of the nav bar for your convenience. Check them out!
- ![Home Page](https://i.imgur.com/gguygrr.png)
+ ![Home Page](https://i.imgur.com/YwVuduq.jpg)
 
 2. Blog Posts Page
  > Upon navigation to this page, you will find my blog posts ranging from topics such as development, daily life, and my thoughts and interests. Simply click on a blog post to see it's contents. 
- ![Blog Posts Page](https://i.imgur.com/NzSeeAG.png)
+ ![Blog Posts Page](https://i.imgur.com/D4xGGik.png)
 
 3. Projects Page
  > Upon navigation to this page, you will find my past projects and some information regarding them. You may choose to click either the title of the project to view it, or the link provided below it.
-![Projects Page](https://i.imgur.com/hQ9Im8J.png)
+![Projects Page](https://i.imgur.com/AzzGwIs.png)
 
 4. About me Page
  > On this page, you will find a photo of myself along with some facts about me. Thanks for viewing my portfolio!
- ![About Me Page](https://i.imgur.com/0foWPOZ.png)
+ ![About Me Page](https://i.imgur.com/s70pLJ0.jpg)
 
 
 ## License
